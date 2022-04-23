@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  src: url(../assets/fonts/RobotoCondensed-Regular.ttf);
+  font-family: rbt;
+}
+* {
+  font-family: rbt;
+  box-sizing: border-box;
+}
+
+button, select, input {
+  outline: none;
+  border: none;
+  padding: 7px;
+}
