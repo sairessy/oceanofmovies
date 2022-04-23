@@ -6,7 +6,7 @@ let limitReached = false
 getMovies()
 
 async function getMovies() {
-  const res = await fetch("/api/movies", {
+  const res = await fetch(config.server + "/api/movies", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -60,7 +60,7 @@ document.getElementById("select-category").addEventListener("change", e => {
 document.getElementById("input-search").addEventListener("keyup", async e => {
   const text = e.target.value
   if(text.length > 2) {
-    const res = await fetch("/api/search", {
+    const res = await fetch(config.server + "/api/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
