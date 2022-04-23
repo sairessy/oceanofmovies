@@ -56,6 +56,18 @@ section {
   width: 100%;
 }
 
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 340px;
+}
+
+#loader i {
+  font-size: 32px;
+  color: #aaa;
+}
+
 #movies {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -115,7 +127,7 @@ section {
   background-color: #10076a;
   color: #fff;
   font-size: 16px;
-  /* display: none; */
+  display: none;
 }
 
 #btn-more span {

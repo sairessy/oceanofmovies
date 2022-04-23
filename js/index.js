@@ -30,6 +30,8 @@ async function getMovies() {
   document.getElementById("movies").innerHTML = auxMovies
   
   if(!limitReached) {
+    document.getElementById("btn-more").style.background = "#10076a"
+    document.getElementById("btn-more").style.disabled = false
     document.getElementById("btn-more").style.display = "block"
   } else {
     document.getElementById("btn-more").style.display = "none"
@@ -40,7 +42,9 @@ document.querySelector("body").onscroll = (e) => {
 
 }
 
-document.getElementById("btn-more").addEventListener("click", () => {
+document.getElementById("btn-more").addEventListener("click", (e) => {
+  e.target.style.background = "#aaa"
+  e.target.style.disabled = true
   getMovies()
 })
 
