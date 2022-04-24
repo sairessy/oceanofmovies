@@ -101,7 +101,7 @@ $("#btn-menu").click(() => {
   
 document.getElementById("slider-container").addEventListener("click", e => {
   if(e.target.id == "slider-container") {
-    $("#slider").animate({left: "-85%"}, () => {
+    $("#slider").animate({left: "-80%"}, () => {
       $("#slider-container").fadeOut()
     })
     $("body").css("overflow-y", "scroll")

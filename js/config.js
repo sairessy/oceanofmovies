@@ -1,4 +1,5 @@
 ﻿const config = {
+  version: "1.0.0",
   server: "https://controller-backend.herokuapp.com",
   categories: [
     {id: 0, label: "Acção"},
