@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oceanofmovies</title>
+  <link rel="shortcut icon" href="assets/img/logo-512.png" type="image/x-icon">
   <link rel="stylesheet" href="libraries/css/line-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/index.css">
@@ -13,10 +14,8 @@
   <header>
     <div id="header">
       <div id="left">
-        <i class="la la-2x la-bars" id="menu"></i>
-        <select id="select-category">
-          <option value="">Todasx</option>
-        </select>
+        <i class="la la-2x la-bars" id="btn-menu"></i>
+        <select id="select-category"></select>
       </div>
       <div id="right">
         <input type="search" id="input-search" placeholder="Pesquisar">
@@ -35,8 +34,15 @@
       </div>
       <button id="btn-more"><span>Mais</span><i class="la la-angle-down"></i></button>
     </section>
+
+    <div id="slider-container">
+      <div id="slider">
+        <a href="https://wa.me/+258847460853"><i class="la la-whatsapp"></i><span>Nós escutamos</span></a>
+      </div>
+    </div>
   </main>
 
+  <script src="libraries/js/jquery-3.6.0.min.js"></script>
   <script src="js/config.js"></script>
   <script src="js/movies.js"></script>
   <script src="js/Movie.js"></script>

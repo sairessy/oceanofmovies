@@ -89,3 +89,21 @@ document.getElementById("input-search").addEventListener("keyup", async e => {
     }
   }
 })
+
+// Controll slider behavior
+$("#btn-menu").click(() => {
+  $("#slider-container").fadeIn(() => {
+    $("#slider").animate({left: "0"})
+  })
+
+  $("body").css("overflow-y", "hidden")
+})
+  
+document.getElementById("slider-container").addEventListener("click", e => {
+  if(e.target.id == "slider-container") {
+    $("#slider").animate({left: "-85%"}, () => {
+      $("#slider-container").fadeOut()
+    })
+    $("body").css("overflow-y", "scroll")
+  }
+})

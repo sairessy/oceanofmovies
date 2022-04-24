@@ -19,9 +19,13 @@ header {
   padding: 5px;
 }
 
-#menu {
+#btn-menu {
   color: #fff;
   margin-right: 10px;
+}
+
+#btn-menu:active {
+  opacity: .6;
 }
 
 select {
@@ -136,6 +140,37 @@ section {
 
 #btn-more:active {
   opacity: .9;
+}
+
+/* Slider */
+#slider-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.526);
+  z-index: 3;
+  display: none;
+  overflow: hidden;
+}
+
+#slider {
+  position: absolute;
+  width: 85%;
+  left: -85%;
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#slider a {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+#slider a span {
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 1024px) {
