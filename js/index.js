@@ -2,6 +2,7 @@ let category = ""
 let limit = 4
 const limitPlus = 4
 let limitReached = false
+let darkTheme = false
 
 getMovies()
 
@@ -48,7 +49,7 @@ document.getElementById("btn-more").addEventListener("click", (e) => {
   getMovies()
 })
 
-let cs = '<option value="">Todas categorias</option>'
+let cs = '<option value="">Todos</option>'
 config.categories.forEach(c => {
   cs += `<option value="${c.id}">${c.label}</option>`
 });
@@ -92,18 +93,22 @@ document.getElementById("input-search").addEventListener("keyup", async e => {
 
 document.getElementById("checkbox-change-theme").addEventListener("change", e => {
   const checked = e.target.checked
-  // alert("Working on it!!!")
+  darkTheme = checked
+  
+  $("body").css({"background" : `${darkTheme ? "#444" : "#fff"}`})
+
   if(checked) {
     $("#slider").css({"background" : "#000"})
-    $("#slider-container").css({"background" : "#000000be"})
+    $("#slider-container").css({"background" : "#000000cc"})
+    $("#loader").css({"background" : "#444"})
   } else {
     $("#slider").css({"background" : "#fff"})
     $("#slider-container").css({"background" : "#00000086"})
+    $("#btn-more").css({"border" : "1px solid #333"})
   }
-  // $("body").css({"background" : "#444"})
-  // $(".movie").css({"background" : "#444"})
-  // $(".movie-cover").css({"background-color" : "#000"})
-  // $("#btn-more").css({"border-color" : "#333"})
+
+  limit -= limitPlus
+  getMovies()
 })
 
 // Controll slider behavior

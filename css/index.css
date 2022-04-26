@@ -30,7 +30,7 @@ header {
 
 select {
   border-radius: 5px;
-  width: 80px;
+  width: 85px;
 }
 
 #input-search {
@@ -129,7 +129,6 @@ section {
   width: calc(100% - 30px);
   border-radius: 5px;
   outline: none;
-  border: 1px solid #ddd;
   background-color: #10076a;
   color: #fff;
   font-size: 16px;
@@ -191,10 +190,14 @@ section {
 }
 
 #change-theme {
-  padding: 10px 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#change-theme input {
+  accent-color: #10076a;
 }
 
 #change-theme label {

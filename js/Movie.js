@@ -9,8 +9,8 @@ const Movie = (id, title, cover, categories) => {
   })
 
   return(`
-    <div class="movie">
-      <div class="movie-cover" style="background-image: url(${cover})">
+    <div class="movie" style="background: ${darkTheme ? "#444" : "#fff"};">
+      <div class="movie-cover" style="background-image: url(${cover});background-color: ${darkTheme ? "#000" : "#ddd"};>
         <a href="movie.html?v=${id}"><i class="la la-play-circle"></i></a>
       </div>
       <div class="movie-details">
