@@ -90,6 +90,22 @@ document.getElementById("input-search").addEventListener("keyup", async e => {
   }
 })
 
+document.getElementById("checkbox-change-theme").addEventListener("change", e => {
+  const checked = e.target.checked
+  // alert("Working on it!!!")
+  if(checked) {
+    $("#slider").css({"background" : "#000"})
+    $("#slider-container").css({"background" : "#000000be"})
+  } else {
+    $("#slider").css({"background" : "#fff"})
+    $("#slider-container").css({"background" : "#00000086"})
+  }
+  // $("body").css({"background" : "#444"})
+  // $(".movie").css({"background" : "#444"})
+  // $(".movie-cover").css({"background-color" : "#000"})
+  // $("#btn-more").css({"border-color" : "#333"})
+})
+
 // Controll slider behavior
 $("#btn-menu").click(() => {
   $("#slider-container").fadeIn(() => {
