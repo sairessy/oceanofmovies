@@ -1,7 +1,7 @@
 ﻿const config = {
   version: "1.0.0",
-  // server: "https://controller-backend.herokuapp.com",
-  server: "http://localhost:8000",
+  server: "https://controller-backend.herokuapp.com",
+  // server: "http://localhost:8000",
   // server: "http://192.168.43.5:8000",
   categories: [
     {id: 0, label: "Acção"},
