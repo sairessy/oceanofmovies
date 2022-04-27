@@ -93,18 +93,17 @@ document.getElementById("input-search").addEventListener("keyup", async e => {
 
 document.getElementById("checkbox-change-theme").addEventListener("change", e => {
   const checked = e.target.checked
-  darkTheme = checked
+  darkTheme = !checked
   
   $("body").css({"background" : `${darkTheme ? "#444" : "#fff"}`})
 
-  if(checked) {
+  if(!checked) {
     $("#slider").css({"background" : "#000"})
     $("#slider-container").css({"background" : "#000000cc"})
     $("#loader").css({"background" : "#444"})
   } else {
     $("#slider").css({"background" : "#fff"})
     $("#slider-container").css({"background" : "#00000086"})
-    $("#btn-more").css({"border" : "1px solid #333"})
   }
 
   limit -= limitPlus

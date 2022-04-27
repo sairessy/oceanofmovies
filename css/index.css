@@ -103,7 +103,7 @@ section {
 }
 
 .movie-cover i {
-  font-size: 48px;
+  font-size: 52px;
   color: #666;
 }
 
@@ -133,6 +133,7 @@ section {
   background-color: #10076a;
   color: #fff;
   font-size: 16px;
+  user-select: none;
   display: none;
 }
 
@@ -158,11 +159,11 @@ section {
 /* Slider */
 #slider-container {
   position: fixed;
-  width: 100%;
-  height: 100vh;
   top: 0;
+  width: 100%;
+  height: 105vh;
+  bottom: 0;
   background-color: #00000086;
-  /* background-color: #000000be; */
   z-index: 3;
   display: none;
   overflow: hidden;
@@ -173,8 +174,9 @@ section {
   width: 80%;
   left: -80%;
   background-color: #fff;
-  height: 100vh;
+  height: 100%;
   overflow-y: scroll;
+  padding-bottom: 20px;
 }
 
 #slider a {
@@ -195,6 +197,10 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#change-theme i {
+  margin-right: 10px;
 }
 
 #change-theme input {
