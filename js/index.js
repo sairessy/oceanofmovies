@@ -81,8 +81,8 @@ document.getElementById("input-search").addEventListener("keyup", async e => {
   
       for (let i = 0; i < movies.length; i++) {
         const movie = movies[i];
-        const {_id, title, cover, categories} = movie
-        auxMovies += Movie(_id, title, cover, categories)
+        const {_id, title, cover, categories, views} = movie
+        auxMovies += Movie(_id, title, cover, categories, views)
       }
     
       document.getElementById("movies").innerHTML = auxMovies
