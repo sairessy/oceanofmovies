@@ -92,7 +92,11 @@ document.getElementById("input-search").addEventListener("keyup", async e => {
 })
 
 document.getElementById("checkbox-change-theme").addEventListener("change", e => {
-  const checked = e.target.checked
+  changeTheme(e.target.checked)
+})
+
+function changeTheme(val) {
+  const checked = val
   darkTheme = !checked
   
   $("body").css({"background" : `${darkTheme ? "#444" : "#fff"}`})
@@ -104,11 +108,12 @@ document.getElementById("checkbox-change-theme").addEventListener("change", e =>
   } else {
     $("#slider").css({"background" : "#fff"})
     $("#slider-container").css({"background" : "#00000086"})
+    $("#loader").css({"background" : "#fff"})
   }
 
   limit -= limitPlus
   getMovies()
-})
+}
 
 // Controll slider behavior
 $("#btn-menu").click(() => {

@@ -3,8 +3,14 @@ body {
   padding: 0;
 }
 
+@font-face {
+  src: url(../assets/fonts/RobotoCondensed-Regular.ttf);
+  font-family: rbt;
+}
+
 * {
-  font-family: 'Roboto Condensed', sans-serif;
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: rbt;
   box-sizing: border-box;
 }
 
