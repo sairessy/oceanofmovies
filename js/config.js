@@ -15,5 +15,6 @@
     {id: 8, label: "Policial"},
     {id: 9, label: "Guerra"},
     {id: 10, label: "Ficção científica"},
+    {id: 11, label: "+18"}
   ]
 }

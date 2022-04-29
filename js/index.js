@@ -49,7 +49,7 @@ document.getElementById("btn-more").addEventListener("click", (e) => {
   getMovies()
 })
 
-let cs = '<option value="">Todos</option>'
+let cs = '<option value="">Todas categorias</option>'
 config.categories.forEach(c => {
   cs += `<option value="${c.id}">${c.label}</option>`
 });
@@ -115,6 +115,14 @@ function changeTheme(val) {
   getMovies()
 }
 
+
+$("#input-search").focus(() => {
+  $("select").hide()
+})
+
+$("#input-search").blur(() => {
+  $("select").show()
+})
 // Controll slider behavior
 $("#btn-menu").click(() => {
   $("#slider-container").fadeIn(() => {

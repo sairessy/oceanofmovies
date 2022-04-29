@@ -1,6 +1,10 @@
+:root {
+  --primary-color: #10076a;
+}
+
 /* Header */
 header {
-  background-color: #10076a;
+  background-color: var(--primary-color);
   height: 120px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -17,18 +21,21 @@ header {
   display: flex;
   align-items: center;
   padding: 5px;
+}
+
+#header #right {
   width: 100%;
+  justify-content: flex-end;
 }
 
 #header-2 {
-  background-color: yellow;
   position: relative;
   display: flex;
   justify-content: center;
 }
 
 #btn-options {
-  /* color: #fff; */
+  color: #fff;
   padding: 5px;
   margin-left: 5px;
 }
@@ -36,19 +43,43 @@ header {
 #btn-menu {
   color: #fff;
   margin-right: 10px;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+#btn-menu:active {
+  background-color: #00000041;
 }
 
 select {
   border-radius: 5px;
-  width: 85px;
+  width: 140px;
   padding: 10px;
+  z-index: 10;
+  background: none;
+  font-size: 14px;
+  color: #fff;
+  background: #00000048;
 }
 
 #input-search {
   border-radius: 5px;
-  background: url(../assets/img/icons8-search-192.svg) no-repeat 5px center/20px;
-  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 5px center;
+  background-image: url(../assets/img/search-light.svg);
+  background-color: var(--primary-color);
   padding: 10px 10px 10px 30px;
+  width: 10px;
+  z-index: 10;
+  font-size: 16px;
+  color: #666;
+}
+
+#input-search:focus {
+  flex: 1;
+  /* background-image: url(../assets/img/search-dark.svg); */
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 #logo-title {
@@ -184,7 +215,7 @@ section {
   height: 100vh;
   bottom: 0;
   background-color: #00000086;
-  z-index: 3;
+  z-index: 30;
   display: none;
   overflow: hidden;
 }
