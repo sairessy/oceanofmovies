@@ -17,6 +17,7 @@ header {
   display: flex;
   align-items: center;
   padding: 5px;
+  width: 100%;
 }
 
 #header-2 {
@@ -24,6 +25,12 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+#btn-options {
+  /* color: #fff; */
+  padding: 5px;
+  margin-left: 5px;
 }
 
 #btn-menu {

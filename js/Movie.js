@@ -1,4 +1,4 @@
-const Movie = (id, title, cover, categories) => {
+const Movie = (id, title, cover, categories, views) => {
   let auxCategories = ""
 
   categories.forEach(c => {
@@ -22,7 +22,7 @@ const Movie = (id, title, cover, categories) => {
         </div>
         <div class="views-likes">
           <div>
-            <b>${1 / 1000}K</b><span> Views</span>
+            <b>${views / 1000}K</b><span> Views</span>
           </div>  
         </div>
       </div>

@@ -14,7 +14,7 @@ async function getMovies() {
     },
     body: JSON.stringify({limit, category})
   })
-
+  
   const json = await res.json()
   const movies = json.data.movies
   limitReached = json.data.limitReached
@@ -23,8 +23,8 @@ async function getMovies() {
 
   for (let i = 0; i < movies.length; i++) {
     const movie = movies[i];
-    const {_id, title, cover, categories} = movie
-    auxMovies += Movie(_id, title, cover, categories)
+    const {_id, title, cover, categories, views} = movie
+    auxMovies += Movie(_id, title, cover, categories, views)
   }
 
   limit += limitPlus
