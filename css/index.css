@@ -66,20 +66,19 @@ select {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: 20px;
-  background-position: 5px center;
+  background-position: 8px center;
   background-image: url(../assets/img/search-light.svg);
   background-color: var(--primary-color);
-  padding: 10px 10px 10px 30px;
+  padding: 10px 10px 10px 35px;
   width: 10px;
   z-index: 10;
   font-size: 16px;
-  color: #666;
+  color: #aaa; 
 }
 
 #input-search:focus {
-  flex: 1;
-  /* background-image: url(../assets/img/search-dark.svg); */
-  background-color: rgba(255, 255, 255, 0.12);
+  flex: 1; 
+  background-color: #ffffff1f;
 }
 
 #logo-title {
@@ -170,9 +169,6 @@ section {
   height: 45px;
 }
 
-.movie-details .views-likes {
-}
-
 #btn-more {
   display: block;
   padding: 15px;
@@ -182,18 +178,18 @@ section {
   outline: none;
   border: none;
   background-color: #10076a;
+  height: 50px;
   color: #fff;
-  font-size: 16px;
-  user-select: none;
+  font-size: 16px; 
   display: none;
 }
 
 #btn-more span {
-  margin-right: 20px;
+  margin-right: 20px; 
 }
 
 #btn-more i {
-  animation: anm 3s 1s infinite;
+  animation: anm 3s 1s infinite;  
 }
 
 @keyframes anm {

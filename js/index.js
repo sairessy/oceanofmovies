@@ -21,21 +21,23 @@ async function getMovies() {
 
   let auxMovies = ""
 
-  for (let i = 0; i < movies.length; i++) {
-    const movie = movies[i];
-    const {_id, title, cover, categories, views} = movie
-    auxMovies += Movie(_id, title, cover, categories, views)
-  }
-
-  limit += limitPlus
-  document.getElementById("movies").innerHTML = auxMovies
+  if(movies.length > 0) {
+    for (let i = 0; i < movies.length; i++) {
+      const movie = movies[i];
+      const {_id, title, cover, categories, views} = movie
+      auxMovies += Movie(_id, title, cover, categories, views)
+    }
   
-  if(!limitReached) {
-    document.getElementById("btn-more").style.background = "#10076a"
-    document.getElementById("btn-more").style.disabled = false
-    document.getElementById("btn-more").style.display = "block"
-  } else {
-    document.getElementById("btn-more").style.display = "none"
+    limit += limitPlus
+    document.getElementById("movies").innerHTML = auxMovies
+    
+    if(!limitReached) {
+      document.getElementById("btn-more").style.background = "#10076a"
+      document.getElementById("btn-more").style.disabled = false
+      document.getElementById("btn-more").style.display = "block"
+    } else {
+      document.getElementById("btn-more").style.display = "none"
+    }
   }
 }
 
@@ -46,6 +48,7 @@ document.querySelector("body").onscroll = (e) => {
 document.getElementById("btn-more").addEventListener("click", (e) => {
   e.target.style.background = "#aaa"
   e.target.style.disabled = true
+  // e.target.style.display = "none"
   getMovies()
 })
 
