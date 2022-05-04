@@ -108,10 +108,12 @@ function changeTheme(val) {
     $("#slider").css({"background" : "#000"})
     $("#slider-container").css({"background" : "#000000cc"})
     $("#loader").css({"background" : "#444"})
+    $(".movie").css({"background" : "#444"})
   } else {
     $("#slider").css({"background" : "#fff"})
     $("#slider-container").css({"background" : "#00000086"})
     $("#loader").css({"background" : "#fff"})
+    $(".movie").css({"background" : "#fff"})
   }
 
   limit -= limitPlus
