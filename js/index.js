@@ -145,3 +145,14 @@ document.getElementById("slider-container").addEventListener("click", e => {
     $("body").css("overflow-y", "scroll")
   }
 })
+
+if(Notification.permission !== "denied") {
+  Notification.requestPermission().then(permition => {
+    if(permition === "granted") {
+      const notification = new Notification("Restrição de água!", {
+        body: "Haverá restrição de água nas cidades de Maputo e Matola entre as 00:00 às 15:00!",
+        icon: "../assets/img/logo.png"
+      })
+    }
+  })
+}
